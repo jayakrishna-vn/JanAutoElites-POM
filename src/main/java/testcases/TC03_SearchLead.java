@@ -11,11 +11,11 @@ public class TC03_SearchLead extends OpentapsWrappers{
 
 	
 	
-	@Test(dataProvider="")
-	public void searchLeadId(){
-		new LoginPage().loginToOpenTaps("", "").clickcrmsfa().
-		clickLeadsTab().clickFindLead().enterLeadId(10003).clickFindLeadbutton()
-		.verifySearchResult("10003");
+	//@Test(dataProvider="")
+	//public void searchLeadId(){
+		// new LoginPage().loginToOpenTaps("", "").clickcrmsfa().
+		// clickLeadsTab().clickFindLead().enterLeadId(10003).clickFindLeadbutton()
+		// .verifySearchResult("10003");
 		
 //		new HomePage()
 //		.clickcrmsfa().clickLeadsTab().clickFindLead().enterLeadId("10003").clickFindLeadbutton()
@@ -23,4 +23,3 @@ public class TC03_SearchLead extends OpentapsWrappers{
 		
 
 	}
-}

@@ -179,7 +179,7 @@ public class GenericWrappers {
 	
 	/**
 	 * Method to locate the web element by using the "ID" and verifying whether
-	 * it matches exactly the text provided
+	 * it matches for the text provided as contained or not
 	 * 
 	 * @param locatorId
 	 * @param textValue
@@ -187,7 +187,8 @@ public class GenericWrappers {
 	 */
 	public boolean verifyTextById(String locatorId, String textValue) {
 		boolean i = false;
-		String sText = driver.findElementByXPath(locatorId).getText();
+		// String sText = driver.findElementByXPath(locatorId).getText();
+		String sText = driver.findElement(By.id(locatorId)).getText();
 		try {
 			if (driver.findElement(By.id(locatorId)).getText().contains(textValue)) {
 				//System.out.println("The Element with Id" + locatorId + "value matches with " + textValue);
