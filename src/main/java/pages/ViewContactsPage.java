@@ -1,8 +1,19 @@
 package pages;
 
+import utils.Reporter;
 import wrappers.OpentapsWrappers;
 
 public class ViewContactsPage extends OpentapsWrappers{
+	
+	
+	public ViewContactsPage() {
+
+		if(!verifyTitle("View Contact | opentaps CRM")){
+			Reporter.reportStep("This is NOT View Contacts page", "FAIL");
+		}
+
+	}
+	
 	
 	
 	public ViewContactsPage verifyContactName(String fullname){

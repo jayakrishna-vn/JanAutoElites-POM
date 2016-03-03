@@ -1,8 +1,19 @@
 package pages;
 
+import utils.Reporter;
 import wrappers.OpentapsWrappers;
 
 public class CreateContactsPage extends OpentapsWrappers{
+	
+	public CreateContactsPage() {
+
+		if(!verifyTitle("Create Contact | opentaps CRM")){
+			Reporter.reportStep("This is NOT Create Contacts page", "FAIL");
+		}
+
+	}
+	
+	
 
 	public CreateContactsPage enterFname(String fname){
 		

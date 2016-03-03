@@ -1,9 +1,19 @@
 package pages;
 
+import utils.Reporter;
 import wrappers.OpentapsWrappers;
 
 public class FindLeadsPage extends OpentapsWrappers{
 
+	
+	public FindLeadsPage() {
+
+		if(!verifyTitle("Find Leads | opentaps CRM")){
+			Reporter.reportStep("This is NOT Find Leads page", "FAIL");
+		}
+
+	}
+	
 	
 	// Enter Lead Id to search for
 	public FindLeadsPage enterLeadId(String leadIDtoDel){
@@ -34,7 +44,7 @@ public class FindLeadsPage extends OpentapsWrappers{
 		
 		public ViewLeadsPage clickSearchResult(){
 			
-			clickByXpath(prop.getProperty("//table[@class='x-grid3-row-table']/tbody/tr/td/div/a"));
+			clickByXpath(prop.getProperty("Findleads.clicksearchres.xpath"));
 			
 			return new ViewLeadsPage();
 			

@@ -1,9 +1,20 @@
 package pages;
 
+import utils.Reporter;
 import wrappers.OpentapsWrappers;
 
 public class MyHomePage extends OpentapsWrappers{
 
+	
+	public MyHomePage() {
+
+		if(!verifyTitle("My Home | opentaps CRM")){
+			Reporter.reportStep("This is NOT My Home page", "FAIL");
+		}
+
+	}
+	
+	
 	
 	// click Leads tab
 		public MyLeadsPage clickLeadsTab(){
