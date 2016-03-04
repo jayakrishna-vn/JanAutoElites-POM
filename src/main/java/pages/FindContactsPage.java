@@ -34,7 +34,7 @@ public class FindContactsPage extends OpentapsWrappers{
 	
 	public ViewContactsPage clickReqContactListResult(){
 		
-		clickByXpath(prop.getProperty("FindContacts.clickReqcontactlist.xpath"));
+	    clickByXpath(prop.getProperty("FindContacts.clickReqcontactlist.xpath"));
 		
 		return new ViewContactsPage();
 		

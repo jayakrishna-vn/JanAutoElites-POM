@@ -41,6 +41,12 @@ public class ViewContactsPage extends OpentapsWrappers{
 	}
 
 
+	public OPCRMPage editContactButton(){
+		
+		clickByLink(prop.getProperty("ViewContacts.editcontact.link"));
+		
+		return new OPCRMPage();
+	}
 	
 	
 }
