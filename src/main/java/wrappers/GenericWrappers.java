@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Platform;
@@ -427,6 +428,15 @@ public class GenericWrappers {
 	
 	}
 
+	
+	public void acceptAlert(){
+		
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+				
+	}
+	
+	
 
 }
 

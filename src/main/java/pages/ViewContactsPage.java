@@ -49,4 +49,16 @@ public class ViewContactsPage extends OpentapsWrappers{
 	}
 	
 	
+	public ViewContactsPage clickDeactivateContact(){
+		
+		clickByLink(prop.getProperty("ViewContacts.deactivatecontact.link"));
+		
+		return this;
+		
+	}
+	
+	
+	
+	
+	
 }
