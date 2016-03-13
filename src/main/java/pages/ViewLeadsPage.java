@@ -1,8 +1,9 @@
 package pages;
 
 import utils.Reporter;
+import wrappers.OpentapsWrappers;
 
-public class ViewLeadsPage extends FindLeadsPage {
+public class ViewLeadsPage extends OpentapsWrappers {
 
 	
 	public ViewLeadsPage() {
@@ -13,8 +14,31 @@ public class ViewLeadsPage extends FindLeadsPage {
 
 	}
 	
+   public ViewLeadsPage verifyCompanyName(String Cname){
+		
+		verifyTextById(prop.getProperty("ViewLeads.verifyCnm.id"), Cname);
+		
+		return this;
+		
+	}
 	
-	public MyLeadsPage clickDeleteLeadButton(){
+	public ViewLeadsPage verifyFnm(String fname) {
+	
+		
+	     verifyTextById(prop.getProperty("ViewLeads.verifyFnm.id"), fname);
+		
+		return this;
+		
+	}
+
+	public ViewLeadsPage verifyLnm(String lname){
+		
+	verifyTextById(prop.getProperty("ViewLeads.verifyLnm.id"), lname);
+		
+		return this;
+	}
+
+  public MyLeadsPage clickDeleteLeadButton(){
 		
 		clickByXpath(prop.getProperty("ViewLeads.clickdeletebutton.xpath"));
 		

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import wrappers.OpentapsWrappers;
 
-public class TC01_LoginSuccess extends OpentapsWrappers{
+public class TC01a_LoginSuccess extends OpentapsWrappers{
 	
 	@BeforeClass
 	public void startTestCase(){
