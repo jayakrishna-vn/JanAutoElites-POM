@@ -13,6 +13,19 @@ public class OPCRMPage extends OpentapsWrappers{
 
 	}
 	
+	public OPCRMPage updateLeadDetails(String fname){
+		
+		enterByXpath(prop.getProperty("OPCRM.editleadfname.xpath"), fname);
+		
+		return this;
+	}
+	
+	public ViewLeadsPage clickUpdateLeadButton(){
+		
+		clickByXpath(prop.getProperty("OPCRM.updateleadbutton.xpath"));
+		
+		return new ViewLeadsPage();
+	}
 	
 	public OPCRMPage updateContactDetails(String fname){
 		

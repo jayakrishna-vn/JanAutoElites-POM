@@ -37,6 +37,14 @@ public class ViewLeadsPage extends OpentapsWrappers {
 		
 		return this;
 	}
+	
+	
+	public OPCRMPage clickEditLeadButton(){
+		
+		clickByLink(prop.getProperty("ViewLeads.clickEditLead.link"));
+		
+		return new OPCRMPage();
+	}
 
   public MyLeadsPage clickDeleteLeadButton(){
 		
